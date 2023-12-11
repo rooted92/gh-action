@@ -1,0 +1,20 @@
+# First add a name for the action
+name: First Workflow
+# Use the 'on' key to define the event for the workflow to run
+
+#trigger
+on: workflow_dispatch # This is an event to manually start the workflow
+
+jobs:
+  #jobs needs a field that belongs to hence the indentation
+  #name the job
+  first-job:
+    #the job definition also needs a field or fields to define details about it
+    #define the runner to create environment to execute action
+    runs-on: ubuntu-latest
+    # next define steps that need to be executed
+    steps:
+      - name: Say wassup
+        run: echo "Wassup"
+      - name: Print later
+        run: echo "Done - later!"
